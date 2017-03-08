@@ -6,12 +6,16 @@ class Bookmark_Manager < Sinatra::Base
   set :session_secret, 'secret' # Need to lookup what this does
 
   get '/' do
-    erb(:index)
+    erb :'links/index'
+  end
+
+  post '/links' do
+    Link.create(title: params[:title], url: params[:url])
+    redirect '/links'
   end
 
   get '/links' do
 p    @links = Link.all
-    erb :links
+    erb :'links/links'
   end
-
 end
