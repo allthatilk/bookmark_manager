@@ -8,5 +8,3 @@ end
 Sinatra::Base.configure :test do
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_test")
 end
-
-Sinatra::Base.configure :production do
