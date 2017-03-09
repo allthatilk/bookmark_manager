@@ -8,7 +8,11 @@ group :test do
   gem "rspec"
 end
 
+# gem "rack", "1.6.5"
+
 gem "sinatra"
+# gem "rspec-sinatra"
 gem "data_mapper"
 gem "dm-postgres-adapter"
-gem "shotgun"
+# gem "shotgun"
+# gem "pg"
