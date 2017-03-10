@@ -5,6 +5,6 @@ feature "Adding tags to search saved URLS" do
     fill_in 'url', with: 'https://www.wikipedia.org'
     fill_in 'tag', with: 'Encyclopedia'
     click_button 'submit'
-    expect(page).to have_content 'Wikipedia'
+    expect(page).to have_content 'Encyclopedia'
   end
 end
