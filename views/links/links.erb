@@ -1,11 +1,22 @@
 <ul id='links'>
   <% @links.each do |link| %>
     <li>
+      <strong>
+        <% link.tags.each do |tag| %>
+          <%=tag.name %>
+        <% end %>
+      </strong>
       <%=link.title %> : <%= link.url %><br>
     </li>
   <% end %>
 </ul>
 
-<div><% @tags.each do |tag| %>
-<strong><%= tag.tag %></strong>
-<% end %></div>
+
+
+<form action='/tags/search'>
+  <div>
+  <label for='search'>SEARCH</label>
+  <input type='text' name='name' id='search'>
+  <input type='submit' value='search_tags'>
+</div>
+</form>

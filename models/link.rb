@@ -5,14 +5,14 @@ class Link
   property :title,    String
   property :url,      String
 
-  has n, :tag, :through => Resource
+  has n, :tags, :through => Resource
 end
 
 class Tag
   include DataMapper::Resource
 
   property :id,       Serial
-  property :tag,      String
+  property :name,      String
 
-  has n, :link, :through => Resource
+  has n, :links, :through => Resource
 end
